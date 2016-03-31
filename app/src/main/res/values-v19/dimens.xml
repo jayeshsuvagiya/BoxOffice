@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appbarpadding">25dp</dimen>
+    <dimen name="navimagetoppadding">24dp</dimen>
+    <dimen name="appbar">61dp</dimen>
+</resources>

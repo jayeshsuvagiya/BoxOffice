@@ -1,0 +1,41 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+
+/*/out
+/*/*/build
+/*/*/production
+*.iws
+*~
+*.swp
+
+# Signing files
+.signing/
+
+# User-specific configurations
+.idea/tasks.xml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/scopes/scope_settings.xml
+.idea/gradle.xml
+.idea/vcs.xml
+/src/main/res/values/api_keys.xml
+
+# OS-specific files
+.DS_Store?
+/app/src/main/res/values/api_keys.xml
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

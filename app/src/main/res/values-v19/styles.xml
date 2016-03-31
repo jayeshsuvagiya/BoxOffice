@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="colorPrimary">@color/white_back</item>
+        <item name="colorPrimaryDark">@color/pink_back</item>
+        <item name="colorAccent">@color/pink_back</item>
+        <item name="colorControlHighlight">@color/colorHighlight</item>
+        <item name="colorControlNormal">@color/colorHighlight</item>-->
+
+
+    </style>
+</resources>
