@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activities.DetailActivity">
     <FrameLayout
         android:paddingTop="@dimen/appbarpadding"
@@ -14,9 +15,11 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/app_bar1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/appbar"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/colorPrimary"
         android:background="@drawable/bgradient"
         android:paddingTop="@dimen/appbarpadding"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        android:title=" "
+        android:theme="@style/Widget.AppCompat.Light.ActionBar"/>
 
 </FrameLayout>

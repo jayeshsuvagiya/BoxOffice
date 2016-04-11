@@ -13,7 +13,7 @@
         android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:paddingTop="@dimen/appbarpadding"
-        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        android:theme="@style/Widget.AppCompat.Light.ActionBar"/>
     <FrameLayout
         android:id="@+id/container_fragmentmovie"
         android:layout_width="match_parent"

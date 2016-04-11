@@ -3,6 +3,9 @@ package com.adamant.boxoffice.Fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,9 +69,11 @@ public class MovieDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         Picasso.with(BoxOfficeApp.getAppContext()).load("http://image.tmdb.org/t/p/w342"+movie.backdropPath).into(backdrop);
         movietitle.setText(movie.title);
-        moviedate.setText(movie.releaseDate);
-        movierating.setText(""+(int) movie.voteAverage);
-        movieoverview.setText(movie.overview);
+        moviedate.setText("Released on "+movie.releaseDate);
+        movierating.setText("Rating -  "+ movie.voteAverage+"/10");
+        SpannableString sb= SpannableString.valueOf("Overview \n\n"+movie.overview);
+        sb.setSpan(new RelativeSizeSpan(2),0,8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        movieoverview.setText(sb);
     }
 
 

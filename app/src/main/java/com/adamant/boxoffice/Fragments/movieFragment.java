@@ -98,7 +98,8 @@ public class movieFragment extends Fragment {
 
                 @Override
                 public void onFailure(Call<ArrayList<Movie>> call, Throwable t) {
-                    Log.d("Mytag", "movie api call failed");
+                    Log.d("Mytag", "movie api call failed"+t.getLocalizedMessage());
+                    t.printStackTrace();
                 }
             });
         }else {
@@ -137,6 +138,8 @@ public class movieFragment extends Fragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu,inflater);
+        hasOptionsMenu();
         inflater.inflate(R.menu.main_activity, menu);
     }
 

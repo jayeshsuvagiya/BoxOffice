@@ -1,50 +1,73 @@
-<RelativeLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightBG"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     >
     <ImageView android:id="@+id/backdrop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="150dp"
+        android:minHeight="200dp"
         android:layout_alignParentTop="true"
         android:adjustViewBounds="true"
         />
-    <TextView
-        android:gravity="center"
-        android:layout_below="@+id/backdrop"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/movietitle"
-        android:padding="2dp"
-        />
-    <TextView
 
-        android:padding="2dp"
-        android:layout_below="@+id/movietitle"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/movierating"
-        android:layout_toLeftOf="@+id/moviedate"
-        android:layout_toStartOf="@+id/moviedate" />
-    <TextView
-
-        android:padding="2dp"
-        android:layout_below="@+id/movietitle"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/moviedate"
-        />
-    <TextView
-        android:gravity="center"
-        android:padding="2dp"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/movierating"
-        android:id="@+id/movieoverview"
-        />
-</RelativeLayout>
+        android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+        <TextView
+            android:background="@color/cardview_light_background"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/movietitle"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:padding="5dp"
+            />
+        <TextView
+            android:background="@color/cardview_light_background"
+            android:textColor="@color/colorPrimaryText"
+            android:gravity="center"
+            android:padding="5dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/movierating"
+            />
+        <TextView
+            android:background="@color/cardview_light_background"
+            android:textColor="@color/colorPrimaryText"
+            android:padding="5dp"
+
+            android:gravity="center"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/moviedate"
+            />
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:cardUseCompatPadding="true"
+            >
+            <TextView
+                android:textColor="@color/colorPrimaryText"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movieoverview"
+                />
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

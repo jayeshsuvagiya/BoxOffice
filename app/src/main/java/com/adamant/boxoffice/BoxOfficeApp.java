@@ -2,6 +2,9 @@ package com.adamant.boxoffice;
 
 import android.app.Application;
 import android.content.Context;
+import android.graphics.Bitmap;
+
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by jayesh on 14-03-2016.
@@ -32,8 +35,8 @@ public class BoxOfficeApp extends Application {
 
             mInstance = this;
             mAppContext = this.getApplicationContext();
-
-
+            Picasso p=new Picasso.Builder(this).defaultBitmapConfig(Bitmap.Config.RGB_565).build();
+            Picasso.setSingletonInstance(p);
             /*
             ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(mAppContext)
                     .denyCacheImageMultipleSizesInMemory()

@@ -3,6 +3,8 @@ package com.adamant.boxoffice.Activities;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.adamant.boxoffice.Fragments.MovieDetailFragment;
 import com.adamant.boxoffice.R;
@@ -24,6 +26,7 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(appBar1);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle(null);
         }
         // Check that the activity is using the layout version with
         // the fragment_container FrameLayout
@@ -47,5 +50,21 @@ public class DetailActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.container_fragmentdetailmovie, fragmentmovie).commit();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id=item.getItemId();
+        switch (id){
+            case android.R.id.home:
+                this.finish();
+                break;
+        }
+        return true;
     }
 }
